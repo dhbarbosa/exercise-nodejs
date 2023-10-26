@@ -1,0 +1,34 @@
+<form action="/post/update" method="POST" class="container p-3">
+  {{#each post}}
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="id"
+        name="id"
+        value="{{id}}"
+        readonly="true"
+      />
+    </div>
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        value="{{title}}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="content">Conteúdo:</label>
+      <textarea
+        class="form-control"
+        id="content"
+        name="content"
+      >{{content}}</textarea>
+    </div>
+    <button type="submit" class="btn mt-3 btn-primary">Alterar</button>
+  {{/each}}
+</form>

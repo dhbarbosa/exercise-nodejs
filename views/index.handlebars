@@ -1,1 +1,14 @@
-<h1>Olá</h1>
+<a href="post/create" class="btn btn-primary">Cadastro</a>
+<h1 class="mt-4">Posts</h1>
+{{#each posts}}
+  <div class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Post: {{id}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Título: {{title}}</h6>
+      <p class="card-text">Conteúdo: {{content}}</p>
+      <p class="card-text">Data: {{createdAt}}</p>
+      <a href="/post/delete/{{id}}" class="btn btn-danger">Deletar</a>
+      <a href="/post/edit/{{id}}" class="btn btn-warning">Alterar</a>
+    </div>
+  </div>
+{{/each}}
